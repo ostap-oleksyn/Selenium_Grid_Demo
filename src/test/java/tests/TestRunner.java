@@ -23,17 +23,17 @@ public class TestRunner {
     public void setUp() throws MalformedURLException {
 
 
-        /*DesiredCapabilities capabilities = new DesiredCapabilities();
+        DesiredCapabilities capabilities = new DesiredCapabilities();
 
-        Platform platform =
-        capabilities.setPlatform();
-        capabilities.setBrowserName();
-        capabilities.setVersion();
+        Platform platform = Platform.WINDOWS;
+        capabilities.setPlatform(platform);
+        capabilities.setBrowserName("firefox");
+        capabilities.setVersion("36");
 
-        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);*/
+        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
 
 
-        driver = new FirefoxDriver();
+//        driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
