@@ -25,10 +25,9 @@ public class TestRunner {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
-        Platform platform = Platform.WINDOWS;
-        capabilities.setPlatform(platform);
-        capabilities.setBrowserName("firefox");
-        capabilities.setVersion("36");
+        capabilities.setPlatform(Platform.WINDOWS);
+        capabilities.setBrowserName("chrome");
+        capabilities.setVersion("43");
 
         driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
 

@@ -20,6 +20,7 @@ public class GoogleTest extends TestRunner {
         homepage.doSearchFor("funny picture");
         Assert.assertTrue(driver.findElement(FIRST_RESULT_LINK)
                         .getText()
+                        .toLowerCase()
                         .contains("funny picture"),
                 "Link does not contain 'funny picture text'");
 
